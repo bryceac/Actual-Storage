@@ -78,7 +78,7 @@ struct ContentView: View {
         #if os(iOS)
         let DOCUMENTS_DIRECTORY = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         
-        guard let UNIT_DATA = try? Data(contentsOf: DOCUMENTS_DIRECTORY.appendingPathComponent("units").appendPathExtension("json")), let UNITS = try? JSON_DECODER.decode([String].self, from: UNIT_DATA) else { return [String]() }
+        guard let UNIT_DATA = try? Data(contentsOf: DOCUMENTS_DIRECTORY.appendingPathComponent("units").appendingPathExtension("json")), let UNITS = try? JSON_DECODER.decode([String].self, from: UNIT_DATA) else { return [String]() }
         
         units = UNITS
         #else
