@@ -36,7 +36,10 @@ struct ContentView: View {
                 TextField("Actual", text: $actualSize).disabled(true)
                 
                 Button("Calculate") {
-                    <#code#>
+                    if let ACTUAL_SIZE = actual(size, inUnit: units[unitSelection]) {
+                        
+                        actualSize = String(format: "%.2f %@", ACTUAL_SIZE, units[unitSelection])
+                    }
                 }
             }
         }
