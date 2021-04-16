@@ -8,10 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var size: String = ""
+    @State private var unitSelection: Int = 0
+    @State private var actualSize: String = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        #if os(iOS)
+        NavigationView {
+            Form {
+                TextField("Size", text: $size)
+                
+                
+            }
+        }
+        #else
+        #endif
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
