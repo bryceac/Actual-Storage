@@ -32,6 +32,12 @@ struct ContentView: View {
                         }
                     }
                 }
+                
+                TextField("Actual", text: $actualSize).disabled(true)
+                
+                Button("Calculate") {
+                    <#code#>
+                }
             }
         }
         #else
@@ -56,6 +62,12 @@ struct ContentView: View {
         #endif
         
         return units
+    }
+    
+    func actual(_ size: String, inUnit unit: String) -> Double {
+        guard let size = Int(size), let UNIT_INDEX = units.firstIndex(of: unit) else { return 0 }
+        
+        return (Double(size)*pow(Double(1000), Double(UNIT_INDEX+1)))/pow(Double(1024), Double(UNIT_INDEX))
     }
 }
 
