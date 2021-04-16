@@ -25,7 +25,25 @@ struct ContentView: View {
         #endif
     }
     
-    
+    func loadUnits() -> [String] {
+        let JSON_DECODER = JSONDecoder()
+        
+        var units: [String] = []
+        
+        #if os(iOS)
+        let DOCUMENTS_DIRECTORY = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        guard let UNIT_DATA = try? Data(contentsOf: DOCUMENTS_DIRECTORY.appendingPathComponent("units").appendPathExtension("json")), let UNITS = try? JSON_DECODER.decode([String].self, from: UNIT_DATA) else { return [String]() }
+        
+        units = UNITS
+        #else
+        guard let BUNDLE_URL = Bundle.main.url(forResource: "units", withExtension: "json"), let UNIT_DATA = try? Data(contentsOf: BUNDLE_URL), let UNITS = try? JSON_DECODER.decode([String].self, from: UNIT_DATA) else { return [String]() }
+        
+        units = UNITS
+        #endif
+        
+        return units
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
