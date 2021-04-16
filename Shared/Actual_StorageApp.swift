@@ -15,9 +15,9 @@ struct Actual_StorageApp: App {
         
         if !FileManager.default.fileExists(atPath: DOCUMENTS_DIRECTORY.appendingPathComponent("units").appendingPathExtension("json").absoluteString) {
             
-            let BUNDLE_PATH = Bundle.main.url(forResource: "units", withExtension: "json")
-            
-            try? FileManager.default.copyItem(at: BUNDLE_PATH, to: DOCUMENTS_DIRECTORY.appendingPathComponent("units").appendingPathExtension("json"))
+            if let BUNDLE_PATH = Bundle.main.url(forResource: "units", withExtension: "json") {
+                try? FileManager.default.copyItem(at: BUNDLE_PATH, to: DOCUMENTS_DIRECTORY.appendingPathComponent("units").appendingPathExtension("json"))
+            }
         }
         #endif
     }
