@@ -44,6 +44,29 @@ struct ContentView: View {
             }
         }
         #else
+        Form {
+            TextField("Size", text: $size)
+            
+            Picker("Units", selection: $unitSelection) {
+                
+                ForEach(units, id: \.self) { unit in
+                    
+                    if let UNIT_INDEX = units.firstIndex(of: unit) {
+                        
+                        Text(unit).tag(UNIT_INDEX)
+                    }
+                }
+            }
+            
+            TextField("Actual", text: $actualSize).disabled(true)
+            
+            Button("Calculate") {
+                if let ACTUAL_SIZE = actual(size, inUnit: units[unitSelection]) {
+                    
+                    actualSize = String(format: "%.2f %@", ACTUAL_SIZE, units[unitSelection])
+                }
+            }
+        }
         #endif
     }
     
