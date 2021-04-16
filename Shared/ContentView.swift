@@ -12,13 +12,26 @@ struct ContentView: View {
     @State private var unitSelection: Int = 0
     @State private var actualSize: String = ""
     
+    var units: [String] {
+        return loadUnits()
+    }
+    
     var body: some View {
         #if os(iOS)
         NavigationView {
             Form {
                 TextField("Size", text: $size)
                 
-                
+                Picker("Units", selection: $unitSelection) {
+                    
+                    ForEach(units, id: \.self) { unit in
+                        
+                        if let UNIT_INDEX = units.firstIndex(of: unit) {
+                            
+                            Text(unit).tag(UNIT_INDEX)
+                        }
+                    }
+                }
             }
         }
         #else
