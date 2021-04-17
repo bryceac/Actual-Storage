@@ -22,8 +22,10 @@
 </dl>
 </li>
 <li>
+<dl>
 <dt style="font-weight:bold">What platforms does this application run on?</dt>
 <dd>Seeing as this is my first foray into SwiftUI, this application is exclusive to Apple platforms, mainly iOS and macOS.</dd>
+</dl>
 </li>
 </ol>
 
