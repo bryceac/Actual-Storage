@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var size: String = ""
+    @State private var size: String = WholeNumbersOnly()
     @State private var unitSelection: Int = 0
     @State private var actualSize: String = ""
     
@@ -20,7 +20,7 @@ struct ContentView: View {
         #if os(iOS)
         NavigationView {
             Form {
-                TextField("Size", text: $size)
+                TextField("Size", text: $size.value).padding().keyboardType(.decimalPad)
                 
                 Picker("Units", selection: $unitSelection) {
                     
@@ -45,7 +45,7 @@ struct ContentView: View {
         }
         #else
         Form {
-            TextField("Size", text: $size)
+            TextField("Size", text: $size.value).padding().keyboardType(.decimalPad)
             
             Picker("Units", selection: $unitSelection) {
                 
