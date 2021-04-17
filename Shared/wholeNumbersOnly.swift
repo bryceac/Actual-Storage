@@ -9,5 +9,13 @@ import Foundation
 import Combine
 
 class WholeNumbersOnly: ObservableObject {
-    
+    @Published var value: String = "" {
+        didSet {
+            let filtered = value.filter { $0.isWholeNumber }
+            
+            if value != filtered {
+                value = filtered
+            }
+        }
+    }
 }
