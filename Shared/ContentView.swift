@@ -48,6 +48,7 @@ struct ContentView: View {
                 
                 TextField("Actual", text: $actualSize).disabled(true)
                 
+                // attempt to run calculation
                 Button("Calculate") {
                     
                     do {
@@ -80,6 +81,7 @@ struct ContentView: View {
             
             TextField("Actual", text: $actualSize).disabled(true)
             
+            // attempt to run calculation
             Button("Calculate") {
                 
                 do {
@@ -97,6 +99,10 @@ struct ContentView: View {
         #endif
     }
     
+    /* function that will attempt to load units from JSON file.
+     
+     Resulting array will be empty if things go wrong.
+     */
     func loadUnits() -> [String] {
         let JSON_DECODER = JSONDecoder()
         
@@ -117,18 +123,25 @@ struct ContentView: View {
         return units
     }
     
+    // method to perform actual calculation
     func actual(_ size: String, inUnit unit: String) throws -> Double {
+        
+        // make sure given size is numeric, otherwise throw an error
         guard let size = Int(size) else {
             throw InputError.sizeNotNumerical
         }
         
+        // variable to hold results of calculation
         var calculation: Double = 0
         
+        // attempt to retrieve the index of the specified unit, to help do proper calculations.
         if let UNIT_INDEX = units.firstIndex(of: unit) {
             
+            // perform calculation, adding 1 to the unit index, so it can be used for exponents.
             calculation = (Double(size)*pow(Double(1000), Double(UNIT_INDEX+1)))/pow(Double(1024), Double(UNIT_INDEX+1))
         }
         
+        // return results.
         return calculation
     }
 }
