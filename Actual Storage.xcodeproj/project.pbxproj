@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021E81D2262B69BF005F9F70 /* Actual Storage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Actual Storage.entitlements"; sourceTree = "<group>"; };
 		023BAD5E2629F540007552B6 /* Actual_StorageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actual_StorageApp.swift; sourceTree = "<group>"; };
 		023BAD5F2629F540007552B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		023BAD602629F541007552B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		023BAD582629F540007552B6 = {
 			isa = PBXGroup;
 			children = (
+				021E81D2262B69BF005F9F70 /* Actual Storage.entitlements */,
 				023BAD5D2629F540007552B6 /* Shared */,
 				023BAD672629F541007552B6 /* iOS */,
 				023BAD6E2629F541007552B6 /* macOS */,
@@ -486,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Actual Storage.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7E4Q9ALK69;
 				ENABLE_PREVIEWS = YES;
@@ -498,6 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryce.actual;
 				PRODUCT_NAME = "Actual Storage";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -508,6 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Actual Storage.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7E4Q9ALK69;
 				ENABLE_PREVIEWS = YES;
@@ -520,6 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryce.actual;
 				PRODUCT_NAME = "Actual Storage";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
