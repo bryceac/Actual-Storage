@@ -45,7 +45,7 @@ struct ContentView: View {
         }
         #else
         Form {
-            TextField("Size", text: $size.value).padding().keyboardType(.decimalPad)
+            TextField("Size", text: $size.value).padding()
             
             Picker("Units", selection: $unitSelection) {
                 
