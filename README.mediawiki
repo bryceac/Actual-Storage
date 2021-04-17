@@ -1,0 +1,54 @@
+=Actual Storage=
+
+'''Description:''' Remake of iOS application that calculates the usable storage on secondary storage mediums (e.g. USB drives, HDDs, SSDs, and optical media).
+
+'''Copyright:''' 2021 Bryce Campbell
+
+'''License:''' See License
+
+'''Version:''' 1.0
+
+==Questions==
+
+<ol>
+<li>
+<dl>
+<dt style="font-weight:bold">Why make yet another version of this application?</dt>
+<dd>
+<p>In the past, when I wrote this app, units and functions for those units were hard coded into the program, which meant that it would needed to be updated whenever new units were being added in, such as ronnabyte and queccabyte, which were proposed metric prefixes back in 2019, according to [https://www.sciencemag.org/news/2019/02/you-know-kilo-mega-and-giga-metric-system-ready-ronna-and-quecca Science Mag].</p>
+<p>However, over the course of my time in programming, I realized it would be easier to create a function that relies on array indices and load the units from JSON.</p>
+<p>This application allows the user to modify the JSON file, so that the user can utilize new units without having to wait for updates on my end.</p>
+</dd>
+</dl>
+</li>
+<li>
+<dt style="font-weight:bold">What platforms does this application run on?</dt>
+<dd>Seeing as this is my first foray into SwiftUI, this application is exclusive to Apple platforms, mainly iOS and macOS.</dd>
+</li>
+</ol>
+
+==Notes==
+
+===Adding Units===
+
+Seeing as this Application pulls units from a JSON file, units can be added by opening that file, which varies based on platform.
+
+On iOS, the file is read from the Application's Documents directory, which <strong>should</strong> be accessible from either iTunes or Finder or the Files app.
+
+On macOS, the file should reside somewhere inside the Application's contents (if you know how to access package contents).
+
+When editing the file <strong>do not</strong> remove any of the already existing units or add anything before <strong>KB</strong>.
+
+While the calculations should still be performed, as exponential powers are based upon a unit's index in the array, the calculations will be wrong, as the formula used only works with positive integers, so units like mB, μB, nB, pB, fB, aB, zB, yB, rB, and qB, which go from 1000^-1 to 1000^-10 will not work appropriately.
+
+as such, it is only ideal to add units when units larger that yottabyte are encountered or desired.
+
+===Support===
+
+With this application basically being the same on Apple's different platforms, email any issues to:
+
+ios@brycecampbell.me
+
+===Note===
+
+This application has been tested on iOS 14 and macOS Big Sur.
