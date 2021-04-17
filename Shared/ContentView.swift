@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var size: String = ""
     @State private var unitSelection: Int = 0
     @State private var actualSize: String = ""
+    @State private var activeInputError: InputError? = nil
     
     var units: [String] {
         return loadUnits()
