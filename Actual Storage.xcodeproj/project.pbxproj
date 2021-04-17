@@ -494,7 +494,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bryce.actual;
+				PRODUCT_BUNDLE_IDENTIFIER = me.brycecampbell.actual;
 				PRODUCT_NAME = "Actual Storage";
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
@@ -518,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bryce.actual;
+				PRODUCT_BUNDLE_IDENTIFIER = me.brycecampbell.actual;
 				PRODUCT_NAME = "Actual Storage";
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;

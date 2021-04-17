@@ -8,16 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // variable to store text field value
     @State private var size: String = ""
+    
+    // variable to hold current picker selection
     @State private var unitSelection: Int = 0
+    
+    // variable to hold calculations results
     @State private var actualSize: String = ""
+    
+    // variable used to help display errors regarding User input.
     @State private var activeInputError: InputError? = nil
     
+    
+    // computed property to load units from JSON file
     var units: [String] {
         return loadUnits()
     }
     
     var body: some View {
+        
+        // set up UI and connections properly, based upon OS
         #if os(iOS)
         NavigationView {
             Form {
