@@ -39,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		021E81B6262B62F5005F9F70 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
 		023BAD5E2629F540007552B6 /* Actual_StorageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actual_StorageApp.swift; sourceTree = "<group>"; };
 		023BAD5F2629F540007552B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		023BAD602629F541007552B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				023BAD682629F541007552B6 /* Info.plist */,
-				021E81B6262B62F5005F9F70 /* iOS.entitlements */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
