@@ -90,10 +90,19 @@ struct ContentView: View {
         return units
     }
     
-    func actual(_ size: String, inUnit unit: String) -> Double? {
-        guard let size = Int(size), let UNIT_INDEX = units.firstIndex(of: unit) else { return nil }
+    func actual(_ size: String, inUnit unit: String) throws -> Double {
+        guard let size = Int(size) else {
+            throw InputError.sizeNotNumerical
+        }
         
-        return (Double(size)*pow(Double(1000), Double(UNIT_INDEX+1)))/pow(Double(1024), Double(UNIT_INDEX+1))
+        var caculation: Double = 0
+        
+        if let UNIT_INDEX = units.firstIndex(of: unit) {
+            
+            calculation = (Double(size)*pow(Double(1000), Double(UNIT_INDEX+1)))/pow(Double(1024), Double(UNIT_INDEX+1))
+        }
+        
+        return caculation
     }
 }
 
