@@ -3,14 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		021E81C8262B68E1005F9F70 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 023BAD6F2629F541007552B6 /* Info.plist */; };
-		021E81CD262B68E5005F9F70 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 023BAD682629F541007552B6 /* Info.plist */; platformFilter = ios; };
-		022726A4262B6E91002C7EF1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 023BAD682629F541007552B6 /* Info.plist */; };
-		022726A9262B6E99002C7EF1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 023BAD6F2629F541007552B6 /* Info.plist */; };
 		023BAD7A2629F541007552B6 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BAD792629F541007552B6 /* Tests_iOS.swift */; };
 		023BAD852629F541007552B6 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BAD842629F541007552B6 /* Tests_macOS.swift */; };
 		023BAD872629F541007552B6 /* Actual_StorageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BAD5E2629F540007552B6 /* Actual_StorageApp.swift */; };
@@ -291,7 +287,6 @@
 			files = (
 				023BAD8B2629F541007552B6 /* Assets.xcassets in Resources */,
 				02D7575A262A04E6003FBF83 /* units.json in Resources */,
-				021E81CD262B68E5005F9F70 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +296,6 @@
 			files = (
 				023BAD8C2629F541007552B6 /* Assets.xcassets in Resources */,
 				02D7575B262A04E6003FBF83 /* units.json in Resources */,
-				021E81C8262B68E1005F9F70 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +303,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				022726A4262B6E91002C7EF1 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +310,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				022726A9262B6E99002C7EF1 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
