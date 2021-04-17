@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var size: String = WholeNumbersOnly()
+    @State private var size = WholeNumbersOnly()
     @State private var unitSelection: Int = 0
     @State private var actualSize: String = ""
     
