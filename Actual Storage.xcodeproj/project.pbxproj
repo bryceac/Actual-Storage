@@ -15,6 +15,8 @@
 		023BAD8A2629F541007552B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023BAD5F2629F540007552B6 /* ContentView.swift */; };
 		023BAD8B2629F541007552B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023BAD602629F541007552B6 /* Assets.xcassets */; };
 		023BAD8C2629F541007552B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023BAD602629F541007552B6 /* Assets.xcassets */; };
+		024C785D262B53FA0079D624 /* InputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024C785C262B53FA0079D624 /* InputError.swift */; };
+		024C785E262B53FA0079D624 /* InputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024C785C262B53FA0079D624 /* InputError.swift */; };
 		02D7575A262A04E6003FBF83 /* units.json in Resources */ = {isa = PBXBuildFile; fileRef = 02D75759262A04E6003FBF83 /* units.json */; };
 		02D7575B262A04E6003FBF83 /* units.json in Resources */ = {isa = PBXBuildFile; fileRef = 02D75759262A04E6003FBF83 /* units.json */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,7 @@
 		023BAD802629F541007552B6 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		023BAD842629F541007552B6 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		023BAD862629F541007552B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		024C785C262B53FA0079D624 /* InputError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputError.swift; sourceTree = "<group>"; };
 		02D75759262A04E6003FBF83 /* units.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = units.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +108,7 @@
 				023BAD5F2629F540007552B6 /* ContentView.swift */,
 				023BAD602629F541007552B6 /* Assets.xcassets */,
 				02D75759262A04E6003FBF83 /* units.json */,
+				024C785C262B53FA0079D624 /* InputError.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -315,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				023BAD892629F541007552B6 /* ContentView.swift in Sources */,
+				024C785D262B53FA0079D624 /* InputError.swift in Sources */,
 				023BAD872629F541007552B6 /* Actual_StorageApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				023BAD8A2629F541007552B6 /* ContentView.swift in Sources */,
+				024C785E262B53FA0079D624 /* InputError.swift in Sources */,
 				023BAD882629F541007552B6 /* Actual_StorageApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
