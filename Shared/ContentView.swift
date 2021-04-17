@@ -43,11 +43,11 @@ struct ContentView: View {
                             
                             actualSize = String(format: "%.2f %@", ACTUAL_SIZE, units[unitSelection])
                     } catch (let e) {
-                        activeInputError = e
+                        activeInputError = e as! InputError
                     }
                     
                 }.alert(item: $activeInputError) { activeError in
-                    activeError?.alert
+                    activeError.alert!
                 }
             }
         }
@@ -79,7 +79,7 @@ struct ContentView: View {
                 }
                 
             }.alert(item: $activeInputError) { activeError in
-                activeError?.alert
+                activeError.alert!
             }
         }
         #endif
