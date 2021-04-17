@@ -37,9 +37,18 @@ struct ContentView: View {
                 TextField("Actual", text: $actualSize).disabled(true)
                 
                 Button("Calculate") {
-                    if let ACTUAL_SIZE = actual(size, inUnit: units[unitSelection]) {
-                        
-                        actualSize = String(format: "%.2f %@", ACTUAL_SIZE, units[unitSelection])
+                    
+                    do {
+                        let ACTUAL_SIZE = try actual(size, inUnit: units[unitSelection])
+                            
+                            actualSize = String(format: "%.2f %@", ACTUAL_SIZE, units[unitSelection])
+                    } catch (let e) {
+                        activeInputError = e
+                    }
+                    
+                }.alert(item: $activeInputError) { activeError in
+                    if let alert = activeError.alert {
+                            alert
                     }
                 }
             }
@@ -62,9 +71,18 @@ struct ContentView: View {
             TextField("Actual", text: $actualSize).disabled(true)
             
             Button("Calculate") {
-                if let ACTUAL_SIZE = actual(size, inUnit: units[unitSelection]) {
-                    
-                    actualSize = String(format: "%.2f %@", ACTUAL_SIZE, units[unitSelection])
+                
+                do {
+                    let ACTUAL_SIZE = try actual(size, inUnit: units[unitSelection])
+                        
+                        actualSize = String(format: "%.2f %@", ACTUAL_SIZE, units[unitSelection])
+                } catch (let e) {
+                    activeInputError = e
+                }
+                
+            }.alert(item: $activeInputError) { activeError in
+                if let alert = activeError.alert {
+                        alert
                 }
             }
         }

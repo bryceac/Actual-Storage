@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum InputError: Error {
+enum InputError: String, Error, Identifiable {
     case sizeNotNumerical
     
     var alert: Alert? {
@@ -18,5 +18,9 @@ enum InputError: Error {
         }
         
         return errorAlert
+    }
+    
+    var id: String {
+        return rawValue
     }
 }
