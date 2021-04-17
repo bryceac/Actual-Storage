@@ -545,7 +545,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bryce.actual;
+				PRODUCT_BUNDLE_IDENTIFIER = me.brycecampbell.actual;
 				PRODUCT_NAME = "Actual Storage";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -569,7 +569,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bryce.actual;
+				PRODUCT_BUNDLE_IDENTIFIER = me.brycecampbell.actual;
 				PRODUCT_NAME = "Actual Storage";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
