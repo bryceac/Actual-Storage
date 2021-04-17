@@ -95,14 +95,14 @@ struct ContentView: View {
             throw InputError.sizeNotNumerical
         }
         
-        var caculation: Double = 0
+        var calculation: Double = 0
         
         if let UNIT_INDEX = units.firstIndex(of: unit) {
             
             calculation = (Double(size)*pow(Double(1000), Double(UNIT_INDEX+1)))/pow(Double(1024), Double(UNIT_INDEX+1))
         }
         
-        return caculation
+        return calculation
     }
 }
 
